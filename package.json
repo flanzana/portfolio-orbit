@@ -19,6 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "homepage": "https://flanzana.github.io/portfolio-orbit",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -28,7 +29,6 @@
       "not dead",
       "not op_mini all"
     ],
-    "homepage": "https://flanzana.github.io/portfolio-orbit",
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
