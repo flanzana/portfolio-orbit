@@ -23,11 +23,11 @@ import GenderWoman from "@kiwicom/orbit-components/lib/icons/GenderWoman";
 import Chart from "@kiwicom/orbit-components/lib/icons/Chart";
 import City from "@kiwicom/orbit-components/lib/icons/City";
 import Sightseeing from "@kiwicom/orbit-components/lib/icons/Sightseeing";
+import ContactEmail from "@kiwicom/orbit-components/lib/icons/ContactEmail";
 import Entertainment from "@kiwicom/orbit-components/lib/icons/Entertainment";
-import Anywhere from "@kiwicom/orbit-components/lib/icons/Anywhere";
-import DeviceDesktop from "@kiwicom/orbit-components/lib/icons/DeviceDesktop";
 import Map from "@kiwicom/orbit-components/lib/icons/Map"
 import Sports from "@kiwicom/orbit-components/lib/icons/Sports"
+import Phone from "@kiwicom/orbit-components/lib/icons/Phone";
 import Email from "@kiwicom/orbit-components/lib/icons/Email";
 import Linkedin from "@kiwicom/orbit-components/lib/icons/Linkedin";
 import Twitter from "@kiwicom/orbit-components/lib/icons/Twitter";
@@ -49,13 +49,13 @@ function App() {
         alignItems: "center"
       }}>
         <Stack direction="column" spacing="tight" align="center" /* Stack is like CSS flexbox container */>
-        <Heading
-          element="h1"
-          type="display" // size
-          inverted // white color
-        >
-          ŽANA FLANDER
-        </Heading>
+          <Heading
+            element="h1"
+            type="display" // size
+            inverted // white color
+          >
+            ŽANA FLANDER
+          </Heading>
           <Text type="white">Frontend Developer</Text>
         </Stack>
       </div>
@@ -63,11 +63,11 @@ function App() {
 
       {/* ------------------------------------------------- MAIN ------------------------------------------------- */}
       <div style={{
-        padding: "30px 20px",
-        maxWidth: "700px",
+        padding: defaultTokens.spaceLarge, // 24px
+        maxWidth: defaultTokens.widthModalNormal, // 749px
         margin: "0 auto",
       }}>
-        <Stack direction="column">
+        <Stack direction="column" align="center" spacing="comfy">
 
           {/* ----------------------------- ABOUT ME ----------------------------- */}
           <Card>
@@ -85,25 +85,28 @@ function App() {
                   LinkedIn profile</TextLink>. My hobbies are yoga, volleyball and chess. I am always eager to
                   learn and engage in new things.
                 </Text>
-                <Stack direction="row" spacing="condensed" wrap>
-                  <Badge
+                <Stack direction="row" justify="center" spacing="comfy">
+                  <Button
+                    iconLeft={<Linkedin />}
+                    circled
                     type="info"
-                    icon={<DeviceDesktop />}
-                  >
-                    Frontend
-                  </Badge>
-                  <Badge
+                    href="https://www.linkedin.com/in/zanaflander"
+                    external
+                  />
+                  <Button
+                    iconLeft={<Code />}
+                    circled
                     type="success"
-                    icon={<Anywhere />}
-                  >
-                    Cartography
-                  </Badge>
-                  <Badge
-                    type="success"
-                    icon={<Anywhere />}
-                  >
-                    GIS
-                  </Badge>
+                    href="https://github.com/flanzana"
+                    external
+                  />
+                  <Button
+                    iconLeft={<Twitter />}
+                    circled
+                    type="info"
+                    href="https://twitter.com/flanzana"
+                    external
+                  />
                 </Stack>
               </Stack>
             </CardSection>
@@ -222,6 +225,47 @@ function App() {
             </CardSection>
           </Card>
           {/* ---------- end of Skills ---------- */}
+
+          {/* ----------------------------- PROJECTS ----------------------------- */}
+          <Card>
+            <CardHeader
+              title="PROJECTS"
+              subTitle="Here is a list of my most interesting projects. More projects can be found on my GitHub profile."
+              icon={<Entertainment />}
+            />
+            <CardSection>
+              <List>
+                <ListItem icon={<Map />}>
+                  <TextLink
+                    href="https://flanzana.github.io/almeria-map"
+                    type="primary"
+                    external // opens page in new tab
+                  >
+                    Almeria neighbourhood map
+                  </TextLink>
+                </ListItem>
+                <ListItem icon={<Sports />}>
+                  <TextLink
+                    href="https://flanzana.github.io/memory-game-zana"
+                    type="primary"
+                    external
+                  >
+                    Memory game
+                  </TextLink>
+                </ListItem>
+                <ListItem icon={<Sports />}>
+                  <TextLink
+                    href="https://flanzana.github.io/arcade-game"
+                    type="primary"
+                    external
+                  >
+                    Arcade game Frogger
+                  </TextLink>
+                </ListItem>
+              </List>
+            </CardSection>
+          </Card>
+          {/* ---------- end of Projects ---------- */}
 
           {/* ----------------------------- WORK EXPERIENCE ----------------------------- */}
           <Card>
@@ -449,94 +493,47 @@ function App() {
           </Card>
           {/* ---------- end of Education ---------- */}
 
-          {/* ----------------------------- PROJECTS ----------------------------- */}
+          {/* ----------------------------- CONTACT ----------------------------- */}
           <Card>
             <CardHeader
-              title="PROJECTS"
-              icon={<Entertainment />}
+              title="CONTACT ME"
+              icon={<ContactEmail />}
             />
             <CardSection>
-              <List>
-                <ListItem icon={<Map />}>
-                  <TextLink
-                    href="https://flanzana.github.io/almeria-map"
-                    type="secondary"
-                    external // opens page in new tab
-                  >
-                    Almeria neighbourhood map
-                  </TextLink>
-                </ListItem>
-                <ListItem icon={<Sports />}>
-                  <TextLink
-                    href="https://flanzana.github.io/memory-game-zana"
-                    type="secondary"
-                    external
-                  >
-                    Memory game
-                  </TextLink>
-                </ListItem>
-                <ListItem icon={<Sports />}>
-                  <TextLink
-                    href="https://flanzana.github.io/arcade-game"
-                    type="secondary"
-                    external
-                  >
-                    Arcade game Frogger
-                  </TextLink>
-                </ListItem>
-              </List>
+              <Stack direction="column" spacing="tight" largeMobile={{ direction: "row"}}>
+                <List>
+                  <ListItem icon={<Email />}>
+                    <TextLink href="mailto:zana.flander@kiwi.com" external>zana.flander@kiwi.com</TextLink>
+                  </ListItem>
+                  <ListItem icon={<Phone />}>
+                    +420 000 000 000
+                  </ListItem>
+                </List>
+                <List>
+                  <ListItem icon={<Linkedin />}>
+                    <TextLink href="https://www.linkedin.com/in/zanaflander" external>linkedin.com/in/zanaflander</TextLink>
+                  </ListItem>
+                  <ListItem icon={<Code />}>
+                    <TextLink href="https://github.com/flanzana" external>github.com/flanzana</TextLink>
+                  </ListItem>
+                  <ListItem icon={<Twitter />}>
+                    <TextLink href="https://twitter.com/flanzana" external>twitter.com/flanzana</TextLink>
+                  </ListItem>
+                </List>
+              </Stack>
             </CardSection>
           </Card>
-          {/* ---------- end of Projects ---------- */}
+          {/* ---------- end of Contact ---------- */}
+
+          {/* ----------------------------- FOOTER ----------------------------- */}
+          <Text size="small" type="attention" align="center">
+            Coded and designed with ❤ by <TextLink type="secondary" href="https://flanzana.github.io/" external>Žana Flander</TextLink> and <TextLink type="secondary" href="https://orbit.kiwi/" external>Kiwi.com's design system Orbit</TextLink>
+          </Text>
+          {/* ---------- end of Footer ---------- */}
 
         </Stack>
       </div>
       {/* ---------- end of main ---------- */}
-
-      {/* ------------------------------------------------- FOOTER ------------------------------------------------- */}
-      <div style={{
-        minHeight: "120px",
-        backgroundColor: defaultTokens.paletteProductNormalActive,
-        display: "flex",
-        alignItems: "center"
-      }}>
-        <Stack direction="column" align="center" justify="center">
-          <Stack direction="row" justify="center">
-            <Button
-              iconLeft={<Linkedin customColor={defaultTokens.paletteProductNormalActive} />}
-              circled
-              type="white"
-              href="https://www.linkedin.com/in/zanaflander"
-              external
-            />
-            <Button
-              iconLeft={<Code customColor={defaultTokens.paletteProductNormalActive} />}
-              circled
-              type="white"
-              href="https://github.com/flanzana"
-              external
-            />
-            <Button
-              iconLeft={<Twitter customColor={defaultTokens.paletteProductNormalActive} />}
-              circled
-              type="white"
-              href="https://twitter.com/flanzana"
-              external
-            />
-            <Button
-              iconLeft={<Email customColor={defaultTokens.paletteProductNormalActive} />}
-              circled
-              type="white"
-              href="mailto:zana.flander@kiwi.com"
-              external
-            />
-          </Stack>
-          <Text size="small" type="white" align="center">
-            Coded and designed with ❤ by Žana and <TextLink type="secondary" href="https://orbit.kiwi/" external>Kiwi.com's design system Orbit</TextLink>
-          </Text>
-        </Stack>
-      </div>
-      {/* ---------- end of footer ---------- */}
 
     </div>
   );
