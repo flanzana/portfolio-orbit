@@ -41,33 +41,19 @@ function App() {
       margin: 0,
       backgroundColor: defaultTokens.paletteCloudLight,
     }}>
-      {/* ------------------------------------------------- HEADER ------------------------------------------------- */}
-      <div style={{ // inline CSS
-        minHeight: "100px",
-        backgroundColor: defaultTokens.paletteProductNormalActive,
-        display: "flex",
-        alignItems: "center"
-      }}>
-        <Stack direction="column" spacing="tight" align="center" /* Stack is like CSS flexbox container */>
-          <Heading
-            element="h1"
-            type="display" // size
-            inverted // white color
-          >
-            ŽANA FLANDER
-          </Heading>
-          <Text type="white">Frontend Developer</Text>
-        </Stack>
-      </div>
-      {/* ---------- end of header ---------- */}
-
       {/* ------------------------------------------------- MAIN ------------------------------------------------- */}
       <div style={{
-        padding: defaultTokens.spaceLarge, // 24px
-        maxWidth: defaultTokens.widthModalNormal, // 749px
+        padding: defaultTokens.spaceMedium, // 16px
+        maxWidth: "750px",
         margin: "0 auto",
       }}>
-        <Stack direction="column" align="center" spacing="comfy">
+        <Stack direction="column" align="center" spacing="natural" /* Stack is like CSS flexbox container */>
+
+          {/* ----------------------------- HEADER ----------------------------- */}
+          <Heading element="h1" type="display" /* size */ >
+            Žana Flander
+          </Heading>
+          {/* ---------- end of Header ---------- */}
 
           {/* ----------------------------- ABOUT ME ----------------------------- */}
           <Card>
