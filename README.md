@@ -1,17 +1,17 @@
 
 
-## Perks of using the design system in frontend development
+## Perks of using a design system in frontend development
 
 ### Introduction
 
 This project was created with [Kiwi.com’s design system Orbit](https://orbit.kiwi/) components for 
-workshop *Perks of using the design system in frontend development* at the event 
+workshop *Perks of using a design system in frontend development* at the event 
 [Women in Tech](https://www.womenintech.cz/) in Brno, Czech Republic on May 18, 2019. The final result 
 of this workshop will be a portfolio website, such as [https://flanzana.github.io/portfolio-orbit](https://flanzana.github.io/portfolio-orbit).
 
 ### About the workshop
 
-In the workshop *Perks of using the design system in frontend development*, 
+In the workshop *Perks of using a design system in frontend development*, 
 Žana will show you how working with a design system, such as 
 Kiwi.com’s design system Orbit, makes frontend developer’s life 
 easier and can save hours of working time. She will walk you through different Orbit 
