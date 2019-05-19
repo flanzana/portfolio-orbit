@@ -18,6 +18,12 @@ easier and can save hours of working time. She will walk you through different O
 components and display examples of their use. During the workshop, you will also 
 create your own website by using Orbit components only.
 
+Useful links:
+
+- [Presentation of the workshop](./orbit-workshop-presentation.pdf)
+- [Code template for the workshop in Codesandbox](https://codesandbox.io/s/k08k9077zv)
+- [Planned final code for the workshop in Codesandbox](https://codesandbox.io/s/p2rvv0q2yj)
+
 ### Who can attend the workshop
 
 Although Orbit is using framework ReactJS, Žana simplified the whole project as much as possible, 
@@ -26,8 +32,9 @@ so everyone with basic knowledge of HTML and CSS can follow the workshop.
 ### Required equipment
 
 We will be coding in [Codesandbox](https://codesandbox.io), so the only thing you need 
-is a laptop and browser (Chrome recommended). No additional software needed.
+is a laptop and browser (Google Chrome recommended). No additional software needed.
 
 ### Sources
 
 - [Kiwi.com's design system Orbit](https://orbit.kiwi/)
+- [Storybook of Kiwi.com's design system Orbit](https://kiwicom.github.io/orbit-components/?path=/story/icon--list-of-all-icons)
